@@ -41,6 +41,7 @@
                 "ecr:GetAuthorizationToken",
                 "ecr:InitiateLayerUpload",
                 "ecr:PutImage",
+                "ecr:*",
                 "ecr:UploadLayerPart"
             ],
             "Resource": "*",
