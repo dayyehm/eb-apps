@@ -9,12 +9,12 @@ phases:
     commands:
      - echo Build started on `date`
      - echo Building the Docker image...
-     - docker build -t 502706730710.dkr.ecr.us-east-1.amazonaws.com/eb-cb:latest  .
+     - docker build -t 502706730710.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest  .
   post_build:
     commands:
      - echo Build completed on `date`
      - echo Pushing the Docker image...
-     - docker push 502706730710.dkr.ecr.us-east-1.amazonaws.com/eb-cb:latest
+     - docker push 502706730710.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest
 
 artifacts:
     files:
