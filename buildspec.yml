@@ -14,7 +14,7 @@ phases:
     commands:
      - echo Build completed on `date`
      - echo Pushing the Docker image...
-     - docker push 502706730710.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest
+     - docker push 502706730710.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest2
 
 artifacts:
     files:
