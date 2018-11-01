@@ -1,0 +1,50 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CloudWatchLogsPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "logs:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "CodeCommitPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "codecommit:BatchGetRepositories",
+                "codecommit:Get*",
+                "codecommit:GitPull",
+                "codecommit:List*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "S3GetObjectPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:CompleteLayerUpload",
+                "ecr:GetAuthorizationToken",
+                "ecr:InitiateLayerUpload",
+                "ecr:PutImage",
+                "ecr:UploadLayerPart"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

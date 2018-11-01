@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+     - echo Logging in to Amazon ECR...
+     - $(aws ecr get-login --region us-east-1)
+  build:
+    commands:
+     - echo Build started on `date`
+     - echo Building the Docker image...
+     - docker build -t 502706730710.dkr.ecr.us-east-1.amazonaws.com/eb-cb:latest  .
+  post_build:
+    commands:
+     - echo Build completed on `date`
+     - echo Pushing the Docker image...
+     - docker push 502706730710.dkr.ecr.us-east-1.amazonaws.com/eb-cb:latest
+
+artifacts:
+    files:
+     - Dockerrun.aws.json
+
+eb_codebuild_settings:
+  CodeBuildServiceRole: arn:aws:iam::502706730710:role/CodeBuild_EB_role
+  ComputeType: BUILD_GENERAL1_SMALL
+  Image: aws/codebuild/docker:1.12.1
+  Timeout: 60
