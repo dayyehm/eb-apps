@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "<account_id>.dkr.ecr.us-east-1.amazonaws.com/eb-cb:latest",
+    "Name": "502706730710.dkr.ecr.us-east-1.amazonaws.com/eb-cb:latest",
     "Update": "true"
   },
   "Ports": [
