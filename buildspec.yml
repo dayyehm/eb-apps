@@ -9,7 +9,7 @@ phases:
     commands:
      - echo Build started on `date`
      - echo Building the Docker image...
-     - docker build -t  tetranoodle .
+     - docker build -t  502706730710.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest .
   post_build:
     commands:
      - echo Build completed on `date`
